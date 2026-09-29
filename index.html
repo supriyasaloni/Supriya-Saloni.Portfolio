@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Supriya Saloni | Business &amp; Data Analyst Portfolio</title>
+  <meta name="description" content="Business &amp; Data Analyst with nearly 3 years of combined experience across Cisco Systems and Social Prachar. SQL, Power BI, Tableau, Excel, Python.">
+  <meta property="og:title" content="Supriya Saloni | Business &amp; Data Analyst Portfolio">
+  <meta property="og:description" content="Business &amp; Data Analyst with nearly 3 years of combined experience. SQL, Power BI, Tableau, Excel, Python. Open to Data Analyst, BI Analyst &amp; Business Analyst roles.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-2: #1e293b;
+      --panel: #334155;
+      --line: #334155;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --gold: #38bdf8;
+      --gold-ink: #0369a1;
+      --gold-glow: rgba(56, 189, 248, 0.15);
+      --green: #4ade80;
+      --display: 'Fraunces', serif;
+      --body: 'Instrument Sans', sans-serif;
+      --mono: 'JetBrains Mono', monospace;
+      --radius: 16px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--body); background: var(--bg); color: var(--text);
+      line-height: 1.6; -webkit-font-smoothing: antialiased;
+    }
+    a { text-decoration: none; color: inherit; transition: color 0.2s ease; }
+    ul { list-style: none; }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .nav-row { height: 75px; display: flex; justify-content: space-between; align-items: center; }
+    .brand { font-family: var(--display); font-size: 1.4rem; font-weight: 700; color: var(--text); letter-spacing: -0.02em; }
+    .nav-links { display: flex; align-items: center; gap: 6px; }
+    .nav-links a {
+      color: var(--muted); font-size: 0.92rem; font-weight: 500;
+      padding: 8px 14px; border-radius: 8px; transition: all 0.2s ease;
+    }
+    .nav-links a:hover { color: var(--text); background: rgba(255,255,255,0.05); }
+
+    .hero { padding: 100px 0 120px; position: relative; z-index: 1; }
+    .hero::before { content: ""; position: absolute; top: -20%; left: 10%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(56,189,248,0.12) 0%, transparent 60%); filter: blur(60px); z-index: -1; pointer-events: none; }
+    .hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 60px; align-items: center; }
+    .hero-profile { display: flex; align-items: center; gap: 30px; }
+    .hero-photo {
+      width: 190px; height: 190px; border-radius: 50%;
+      object-fit: cover; object-position: center 15%;
+      border: 2px solid rgba(56,189,248,0.4);
+      padding: 6px; background: var(--bg-2);
+      box-shadow: 0 0 40px rgba(56,189,248,0.15);
+      flex-shrink: 0;
+    }
+    .hero h1 {
+      font-family: var(--display); font-weight: 700;
+      font-size: clamp(2.8rem, 5.5vw, 4rem);
+      line-height: 1.05; letter-spacing: -0.03em;
+      background: linear-gradient(135deg, #ffffff 20%, #38bdf8 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      margin-bottom: 5px;
+    }
+    .hero .role-tag {
+      display: inline-block; margin-top: 10px; color: var(--gold);
+      font-weight: 600; font-size: 1.1rem; letter-spacing: -0.01em;
+    }
+    .hero .role-desc {
+      margin-top: 16px; font-size: 1.05rem; color: var(--muted); line-height: 1.7;
+    }
+    .availability-badge {
+      display: inline-block; margin-top: 14px; padding: 5px 14px;
+      background: rgba(74,222,128,0.12); color: var(--green);
+      border: 1px solid rgba(74,222,128,0.25); border-radius: 20px;
+      font-size: 0.85rem; font-weight: 600;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 11px 22px; border-radius: 8px; font-weight: 600;
+      font-size: 0.95rem; cursor: pointer; transition: all 0.2s ease;
+    }
+    .btn-primary {
+      background: var(--gold); color: var(--bg);
+      border: 1px solid var(--gold);
+    }
+    .btn-primary:hover { background: #7dd3fc; transform: translateY(-2px); box-shadow: 0 6px 16px rgba(56,189,248,0.25); }
+    .btn-outline {
+      background: transparent; color: var(--text);
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+
+    .highlights-card {
+      background: rgba(30,41,59,0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius); padding: 36px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    }
+    .highlights-card h3 { font-family: var(--display); font-size: 1.3rem; margin-bottom: 28px; color: var(--text); display: flex; align-items: center; gap: 10px; }
+    .highlights-list { display: grid; gap: 24px; }
+    .highlight-item { display: flex; gap: 16px; }
+    .highlight-item .icon { font-size: 1.5rem; line-height: 1; margin-top: 2px; opacity: 0.9; }
+    .highlight-item b { display: block; font-size: 1.05rem; font-weight: 600; color: var(--text); }
+    .highlight-item span { color: var(--muted); font-size: 0.95rem; display: block; margin-top: 4px; }
+
+    .section { padding: 90px 0; border-top: 1px solid rgba(255,255,255,0.05); }
+    .section-grid { display: grid; grid-template-columns: 260px 1fr; gap: 40px; }
+    .section h2 {
+      font-family: var(--display); font-size: 2rem; font-weight: 600;
+      position: sticky; top: 120px; letter-spacing: -0.02em; color: var(--text);
+    }
+    .lede { font-size: 1.1rem; color: var(--muted); margin-bottom: 20px; line-height: 1.7; }
+
+    .timeline { display: grid; gap: 56px; }
+    .job h3 { font-family: var(--display); font-size: 1.4rem; font-weight: 600; color: var(--text); }
+    .job .org { color: var(--gold); font-weight: 500; margin-top: 4px; font-size: 1.05rem; }
+    .job .when { color: var(--muted); font-size: 0.95rem; margin-top: 2px; margin-bottom: 16px; }
+    .job .tools-used { margin-bottom: 16px; display: flex; flex-wrap: wrap; gap: 8px; }
+    .job .tools-used .tool-tag { background: rgba(56,189,248,0.08); color: var(--gold); padding: 4px 12px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; border: 1px solid rgba(56,189,248,0.15); }
+    .job ul { display: grid; gap: 12px; }
+    .job li { position: relative; padding-left: 24px; color: var(--muted); font-size: 1rem; line-height: 1.6; }
+    .job li::before { content: "\2192"; position: absolute; left: 0; color: var(--gold); opacity: 0.8; font-weight: bold; }
+    .impact-box { margin-top: 20px; padding: 16px 20px; background: rgba(56,189,248,0.05); border-left: 3px solid var(--gold); border-radius: 6px; }
+    .impact-box b { color: var(--gold); }
+    .impact-box span { color: var(--muted); font-size: 0.98rem; }
+
+    .projects { display: grid; gap: 60px; }
+    .project-section-title { font-size: 1.25rem; font-weight: 700; color: var(--text); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: -30px; margin-top: 10px; display: flex; align-items: center; gap: 10px; }
+    .featured-label { display: inline-block; background: var(--gold); color: var(--bg); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 4px 12px; border-radius: 4px; margin-bottom: 16px; }
+    .project {
+      background: var(--bg-2); border: 1px solid rgba(255,255,255,0.05); border-radius: var(--radius);
+      padding: 40px; position: relative; overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .project:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.2); }
+    .project-media {
+      width: 100%; height: 320px; object-fit: cover; border-radius: 12px;
+      margin-top: 24px; margin-bottom: 24px; border: 1px solid var(--line);
+    }
+    .project-stat-box {
+      float: right; text-align: right; margin-left: 32px; margin-bottom: 24px;
+      background: rgba(15,23,42,0.5); padding: 20px; border-radius: 12px; border: 1px solid var(--line);
+    }
+    .project-stat-box b { font-family: var(--display); font-size: 2rem; color: var(--gold); display: block; line-height: 1; letter-spacing: -0.02em; }
+    .project-stat-box span { font-size: 0.95rem; color: var(--muted); margin-top: 8px; display: block; font-weight: 500; }
+    .project h3 { font-family: var(--display); font-size: 1.6rem; font-weight: 600; line-height: 1.25; color: var(--text); }
+    .project .stack { color: var(--gold); font-size: 0.95rem; font-weight: 600; margin-top: 8px; letter-spacing: 0.02em; }
+    .project ul { display: grid; gap: 10px; margin-top: 16px; }
+    .project li { position: relative; padding-left: 20px; font-size: 1rem; color: var(--muted); line-height: 1.6; }
+    .project li::before { content: "\2022"; position: absolute; left: 0; color: var(--gold); font-size: 1.2rem; line-height: 1.1; }
+    .project .link { margin-top: 24px; font-size: 1rem; font-weight: 600; display: flex; flex-wrap: wrap; gap: 12px; }
+    .project .link a { color: var(--text); display: inline-flex; align-items: center; gap: 6px; padding: 10px 16px; background: var(--panel); border-radius: 8px; transition: background 0.2s; font-size: 0.95rem; }
+    .project .link a:hover { background: var(--line); color: var(--gold); }
+
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+    .skill-card {
+      background: var(--bg-2); border: 1px solid rgba(255,255,255,0.05); border-radius: var(--radius);
+      padding: 32px; transition: all 0.3s ease;
+    }
+    .skill-card:hover { transform: translateY(-4px); background: var(--panel); border-color: rgba(255,255,255,0.1); }
+    .skill-icon { font-size: 2.2rem; margin-bottom: 20px; }
+    .skill-card h3 { font-size: 1.25rem; margin-bottom: 20px; font-weight: 600; color: var(--text); letter-spacing: -0.01em; }
+    .skill-items { display: flex; flex-wrap: wrap; gap: 10px; }
+    .skill-pill {
+      background: rgba(15,23,42,0.6); border: 1px solid rgba(255,255,255,0.05);
+      color: var(--muted); padding: 6px 14px; border-radius: 6px;
+      font-size: 0.92rem; font-weight: 500; transition: color 0.2s;
+    }
+    .skill-card:hover .skill-pill { color: var(--gold); border-color: rgba(56,189,248,0.2); background: rgba(56,189,248,0.05); }
+
+    .achieve-grid { display: grid; gap: 20px; }
+    .win-card {
+      background: var(--bg-2); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px;
+      padding: 24px; display: flex; align-items: flex-start; gap: 20px; transition: transform 0.2s;
+    }
+    .win-card:hover { transform: translateX(4px); background: var(--panel); }
+    .win-icon { font-size: 1.6rem; opacity: 0.9; }
+    .win-card h4 { font-size: 1.1rem; font-weight: 600; color: var(--text); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+    .win-card p { color: var(--muted); font-size: 0.98rem; margin-top: 6px; }
+    .cert-link { display: inline-flex; align-items: center; gap: 4px; font-size: 0.85rem; color: var(--gold); font-weight: 500; margin-top: 6px; }
+    .cert-link:hover { text-decoration: underline; }
+
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+    .contact-box {
+      background: var(--bg-2); border: 1px solid rgba(255,255,255,0.05); border-radius: var(--radius);
+      padding: 40px;
+    }
+    .contact-box h3 { font-family: var(--display); font-size: 1.3rem; margin-bottom: 24px; color: var(--text); }
+    .contact-links { display: grid; gap: 16px; }
+    .contact-link { display: flex; align-items: center; gap: 14px; padding: 14px 18px; background: rgba(15,23,42,0.4); border: 1px solid rgba(255,255,255,0.05); border-radius: 10px; transition: all 0.2s; }
+    .contact-link:hover { border-color: var(--gold); background: rgba(56,189,248,0.05); }
+    .contact-link .cl-icon { font-size: 1.3rem; opacity: 0.8; }
+    .contact-link .cl-label { font-size: 0.85rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 500; }
+    .contact-link .cl-value { font-size: 1rem; font-weight: 600; color: var(--text); margin-top: 2px; }
+    .contact-link:hover .cl-value { color: var(--gold); }
+    .cta-box { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+    .cta-box h3 { margin-bottom: 16px; }
+    .cta-box p { color: var(--muted); font-size: 1.05rem; line-height: 1.6; margin-bottom: 28px; }
+    .cta-box .btn { font-size: 1rem; padding: 14px 28px; }
+
+    footer { border-top: 1px solid rgba(255,255,255,0.05); padding: 48px 0; text-align: center; color: var(--muted); font-size: 0.95rem; }
+
+    @media (max-width: 900px) {
+      .hero-grid, .section-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .hero-profile { flex-direction: column; text-align: center; }
+      .hero h1 { text-align: center; }
+      .hero-actions { justify-content: center; }
+      .section h2 { position: static; margin-bottom: 32px; padding-bottom: 16px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+      .nav-links { display: none; }
+      .project-stat-box { float: none; margin-left: 0; margin-bottom: 24px; text-align: left; display: inline-block; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="wrap nav-row">
+      <a class="brand" href="#top">Supriya Saloni</a>
+      <nav class="nav-links">
+        <a href="#top">Home</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ========== 1. HERO ========== -->
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="hero-profile">
+            <img class="hero-photo" src="profile.jpg" alt="Supriya Saloni - Business and Data Analyst" width="190" height="190">
+            <div>
+              <h1>Supriya Saloni</h1>
+              <span class="role-tag">Business &amp; Data Analyst | SQL | Power BI | Tableau | Excel | Python</span>
+            </div>
+          </div>
+          <p class="role-desc">Business &amp; Data Analyst with nearly 3 years of combined experience across Cisco Systems and Social Prachar. Experienced in analyzing operational datasets, identifying trends &amp; anomalies, gathering stakeholder requirements, and building self-service BI dashboards and automated reporting workflows using SQL, Tableau, Power BI, and Excel.</p>
+          <span class="availability-badge">&#128994; Open to Data Analyst, BI Analyst &amp; Business Analyst Roles &bull; Open to Relocate &amp; Remote</span>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">&#128202; View Projects</a>
+            <a class="btn btn-outline" href="Supriya_Saloni_Resume.pdf" target="_blank">&#128196; View Resume</a>
+            <a class="btn btn-outline" href="https://www.linkedin.com/in/supriya-saloni1212132" target="_blank">LinkedIn</a>
+            <a class="btn btn-outline" href="https://github.com/supriyasaloni" target="_blank">GitHub</a>
+            <a class="btn btn-outline" href="#contact">&#9993; Contact Me</a>
+          </div>
+        </div>
+
+        <!-- Profile Highlights Card -->
+        <div class="highlights-card">
+          <h3>&#11088; Profile Highlights</h3>
+          <div class="highlights-list">
+            <div class="highlight-item">
+              <div class="icon">&#127970;</div>
+              <div>
+                <b>~3 Years Combined Experience</b>
+                <span>Cisco Systems (Business Analyst Trainee) &bull; Social Prachar (Business Analyst Intern)</span>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="icon">&#128187;</div>
+              <div>
+                <b>Core Toolset</b>
+                <span>SQL &bull; Python &bull; Power BI &bull; Tableau &bull; Microsoft Excel</span>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="icon">&#128200;</div>
+              <div>
+                <b>Industry Exposure</b>
+                <span>Global CX Strategy &amp; Planning (Cisco) &bull; Digital Analytics &amp; Higher Ed (Social Prachar)</span>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="icon">&#127942;</div>
+              <div>
+                <b>Key Certifications</b>
+                <span>Simplilearn BA Master's &bull; PW Skills Data Analytics &bull; CCNA (Cisco) &bull; Jira</span>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="icon">&#127891;</div>
+              <div>
+                <b>Education</b>
+                <span><strong style="color: var(--text); font-weight: 600;">JP Institute of Engineering and Technology</strong><br>B.Tech in Computer Science</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 2. ABOUT ========== -->
+    <section class="section" id="about">
+      <div class="wrap section-grid">
+        <h2>About Me</h2>
+        <div>
+          <p class="lede">I am a Business Analyst and Data Analyst with nearly 3 years of combined experience across Cisco Systems and Social Prachar, specializing in business intelligence, operational reporting, dashboard development, and cross-functional stakeholder collaboration.</p>
+          <p class="lede">At <b style="color:var(--text)">Cisco Systems</b>, I worked within the Global CX Strategy &amp; Planning (Business Intelligence Team), leveraging SQL, Excel, Snowflake, and Tableau to analyze ~4,000&ndash;5,000 operational records for the ESI project, identify trends and anomalies, and build self-service dashboards that saved 15+ hours/week for 4&ndash;5 key stakeholders.</p>
+          <p class="lede">At <b style="color:var(--text)">Social Prachar</b>, I conducted exploratory and statistical data analysis on admission datasets, built regression forecasting models in Python (Scikit-learn) achieving an R&sup2; score of 0.81, and translated insights into data-driven business recommendations.</p>
+          <p class="lede">Currently focused on continuous upskilling in Data Analytics and building end-to-end analytical projects in SQL, Python, and Power BI.</p>
+          <p class="lede" style="color: var(--gold); font-weight: 500;">Core Expertise: Business Analysis &bull; Data Analysis &bull; SQL (Joins, CTEs, Window Functions) &bull; Tableau &bull; Power BI &bull; Excel &bull; Python &bull; Stakeholder Management</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 3. EXPERIENCE ========== -->
+    <section class="section" id="experience">
+      <div class="wrap section-grid">
+        <h2>Experience</h2>
+        <div class="timeline">
+          <!-- Cisco -->
+          <article class="job">
+            <h3>Business Analyst Trainee</h3>
+            <p class="org">Cisco Systems (India) Pvt. Ltd. &bull; Global CX Strategy &amp; Planning (Business Intelligence Team)</p>
+            <p class="when">Dec 2022 &ndash; Dec 2024 &bull; 2 Years</p>
+            <div class="tools-used">
+              <span class="tool-tag">SQL</span>
+              <span class="tool-tag">Excel</span>
+              <span class="tool-tag">Snowflake</span>
+              <span class="tool-tag">Tableau</span>
+              <span class="tool-tag">Python</span>
+              <span class="tool-tag">Jira (Certified)</span>
+            </div>
+            <ul>
+              <li>Analyzed operational data (~4,000&ndash;5,000 records) using SQL, Excel (Pivot Tables, Array Functions), and Snowflake to identify trends, anomalies, and data quality issues for the ESI project.</li>
+              <li>Retrieved, cleaned, and aggregated multi-source datasets using SQL and Python, transforming raw unstructured logs into structured datasets.</li>
+              <li>Built and maintained a self-serve TAC CSAT reporting dashboard in Tableau connected to scheduled Snowflake data extracts, eliminating manual spreadsheet workflows and saving 15+ hours/week.</li>
+              <li>Provided 4&ndash;5 key decision-makers with timely visibility into customer satisfaction and response-rate metrics through scheduled data refreshes.</li>
+              <li>Coordinated sprint tracking, issue management, and agile project workflows using Jira (completed Jira Fundamentals Certification by Atlassian University).</li>
+              <li>Conducted knowledge-transfer sessions for 10 team members on analytical processes and data governance standards.</li>
+            </ul>
+            <div class="impact-box">
+              <b>Business Impact:</b> <span>Automated manual data extraction into Tableau dashboards via scheduled Snowflake extracts, reducing weekly reporting overhead by 15+ hours, eliminating manual reporting discrepancies, and improving reporting consistency.</span>
+            </div>
+          </article>
+
+          <!-- Social Prachar -->
+          <article class="job">
+            <h3>Business Analyst Intern</h3>
+            <p class="org">Social Prachar, Hyderabad</p>
+            <p class="when">Jan 2022 &ndash; Jul 2022 &bull; 7 Months</p>
+            <div class="tools-used">
+              <span class="tool-tag">Python</span>
+              <span class="tool-tag">Scikit-learn</span>
+              <span class="tool-tag">EDA</span>
+              <span class="tool-tag">SQL</span>
+              <span class="tool-tag">Statistical Analysis</span>
+            </div>
+            <ul>
+              <li>Retrieved and aggregated admission data (501 records, 9 attributes) from multiple sources, cleaning and structuring it through exploratory data analysis and feature engineering.</li>
+              <li>Conducted exploratory and statistical analysis to identify key factors influencing admission outcomes, translating findings into data-driven business recommendations.</li>
+              <li>Built and evaluated regression models using Python (Scikit-learn) and cross-validation techniques, achieving an R&sup2; score of 0.81 in forecasting and scenario-based analytics.</li>
+            </ul>
+          </article>
+
+          <!-- Upskilling -->
+          <article class="job">
+            <h3>Technical Upskilling &amp; Portfolio Development</h3>
+            <p class="org">Continuous Professional Learning</p>
+            <p class="when">Jan 2025 &ndash; Present</p>
+            <div class="tools-used">
+              <span class="tool-tag">SQL</span>
+              <span class="tool-tag">Power BI</span>
+              <span class="tool-tag">Python</span>
+              <span class="tool-tag">Data Modeling</span>
+            </div>
+            <ul>
+              <li>Completed advanced Data Analytics certification with PW Skills, developing end-to-end analytical models and dashboards in SQL, Python, and Power BI.</li>
+              <li>Deepened practical expertise in dimensional data modeling, DAX measures, and automated ETL pipelines for business intelligence reporting.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+        <!-- ========== 4. PROJECTS ========== -->
+    <section class="section" id="projects">
+      <div class="wrap section-grid">
+        <h2>Projects</h2>
+        <div class="projects">
+
+          <div class="project-section-title">&#11088; Featured Projects</div>
+
+          <!-- PROJECT 1: Customer Shopping Behaviour Analysis (Sep 2026) -->
+          <article class="project">
+            <span class="featured-label">&#9733; Featured</span>
+            <div class="project-stat-box">
+              <b>5,050</b>
+              <span>Customer Records</span>
+            </div>
+            <h3>Customer Shopping Behaviour Analysis</h3>
+            <p class="stack">Python &bull; SQL &bull; Power BI &bull; <span style="color:var(--muted); font-weight:normal; font-size:0.88rem;">Aug 2026 &ndash; Sep 2026 &bull; 4 Weeks</span></p>
+            <img class="project-media" src="customer-dashboard.png" alt="Customer Shopping Behaviour Analysis Dashboard" loading="lazy">
+            <ul>
+              <li>Analyzed <b>5,050 customer records across 17 attributes</b> to understand purchasing patterns and customer behaviour.</li>
+              <li>Performed data cleaning, missing-value treatment, categorical standardization, and feature preparation using Python and Pandas.</li>
+              <li>Used SQL for customer and purchase analysis and developed an interactive Power BI dashboard.</li>
+              <li>Analyzed purchasing behaviour across product categories, locations, seasons, subscriptions, discounts, payment methods, and purchase frequency.</li>
+            </ul>
+            <p class="link">
+              <a href="https://github.com/supriyasaloni/Customer-Analysis-Project" target="_blank">&#8599; View on GitHub</a>
+            </p>
+          </article>
+
+          <!-- PROJECT 2: Amazon Global Sales Analysis (Jun 2026) -->
+          <article class="project">
+            <span class="featured-label">&#9733; Featured</span>
+            <div class="project-stat-box">
+              <b>51K+ Orders</b>
+              <span>Global Dataset</span>
+            </div>
+            <h3>Amazon Global Sales Analysis</h3>
+            <p class="stack">Power BI &bull; DAX &bull; Data Visualization &bull; <span style="color:var(--muted); font-weight:normal; font-size:0.88rem;">May 2026 &ndash; Jun 2026 &bull; 4 Weeks</span></p>
+            <img class="project-media" src="amazon-dashboard.png" alt="Amazon Global Sales Power BI Dashboard" loading="lazy">
+            <ul>
+              <li>Developed an interactive Power BI dashboard to analyze <b>sales performance, units sold, total orders, product returns, customer segments, and regional performance</b>.</li>
+              <li>Used <b>DAX and interactive visualizations</b> to evaluate customer, market, and product performance.</li>
+              <li>Identified the <b>Consumer segment as the highest sales contributor</b> and <b>Asia Pacific as a leading market by total sales</b>.</li>
+              <li>Highlighted <b>negative-profit products</b> for further pricing and cost analysis.</li>
+            </ul>
+            <p class="link">
+              <a href="https://github.com/supriyasaloni/Amazon_Global_Data" target="_blank">&#8599; View on GitHub</a>
+            </p>
+          </article>
+
+          <!-- PROJECT 3: Customer Churn Analysis (Mar 2026) -->
+          <article class="project">
+            <span class="featured-label">&#9733; Featured</span>
+            <div class="project-stat-box">
+              <b>28.6%</b>
+              <span>Baseline Churn Rate</span>
+            </div>
+            <h3>Customer Churn Analysis</h3>
+            <p class="stack">Python &bull; SQL &bull; Power BI &bull; <span style="color:var(--muted); font-weight:normal; font-size:0.88rem;">Feb 2026 &ndash; Mar 2026 &bull; 4 Weeks</span></p>
+            <img class="project-media" src="churn-dashboard.png" alt="Customer Churn Analysis Dashboard" loading="lazy">
+            <ul>
+              <li>Analyzed <b>23 customer records across 20 attributes</b> by integrating subscription, customer, and support data.</li>
+              <li>Performed data cleaning, feature engineering, and EDA to create churn flags, tenure, complaint counts, and customer-risk categories.</li>
+              <li>Calculated an overall <b>28.57% churn rate</b> and analyzed churn patterns across subscription plans.</li>
+              <li>Identified a <b>0.47 correlation between escalations and churn</b> and developed monthly churn-trend analysis.</li>
+            </ul>
+            <p class="link">
+              <a href="https://github.com/supriyasaloni/Churn-Analysis" target="_blank">&#8599; View on GitHub</a>
+            </p>
+          </article>
+
+          <!-- PROJECT 4: Cisco TAC CSAT Reporting & Analysis (Dec 2022 - Dec 2024) -->
+          <article class="project">
+            <span class="featured-label">&#9733; Featured &mdash; Enterprise Experience</span>
+            <div class="project-stat-box">
+              <b>15+ Hours</b>
+              <span>Saved Weekly</span>
+            </div>
+            <h3>Cisco TAC CSAT Reporting &amp; Analysis</h3>
+            <p class="stack">Tableau &bull; SQL &bull; Excel &bull; Snowflake &bull; <span style="color:var(--muted); font-weight:normal; font-size:0.88rem;">Dec 2022 &ndash; Dec 2024</span></p>
+            <ul>
+              <li>Analyzed 4,000+ operational records to identify trends, anomalies, and data-quality issues.</li>
+              <li>Extracted, joined, and aggregated data using SQL and developed Tableau dashboards for CSAT and response-rate analysis.</li>
+              <li>Built self-service reporting to provide stakeholders with centralized visibility into customer-support performance.</li>
+              <li>Automated recurring reporting workflows to reduce manual reporting effort and improve reporting consistency.</li>
+            </ul>
+            <p class="link"><i style="color: var(--muted); font-size: 0.9rem;">Sanitized enterprise case study (Confidential operational metrics)</i></p>
+          </article>
+
+          <div class="project-section-title" style="margin-top: 20px;">&#128193; Additional Projects</div>
+
+          <!-- PROJECT 5: UPI Transactions Dashboard (Nov 2025 - Dec 2025) -->
+          <article class="project">
+            <div class="project-stat-box">
+              <b>30+ States</b>
+              <span>Pan-India Coverage</span>
+            </div>
+            <h3>UPI Transactions Dashboard</h3>
+            <p class="stack">Microsoft Excel &bull; <span style="color:var(--muted); font-weight:normal; font-size:0.88rem;">Nov 2025 &ndash; Dec 2025 &bull; 3 Weeks</span></p>
+            <img class="project-media" src="phonepe-dashboard.png" alt="UPI Transactions Dashboard" loading="lazy">
+            <ul>
+              <li>Built an interactive Excel dashboard to analyze <b>transaction volume, transaction amount, success/failure rates, and transaction trends</b>.</li>
+              <li>Used <b>Pivot Tables, Pivot Charts, Slicers, Excel formulas, data cleaning, and aggregation</b> for interactive reporting.</li>
+              <li>Analyzed transaction performance across <b>UPI applications, states, banks, merchants, and transaction types</b> including P2M, P2P, bill payments, online shopping, and recharge.</li>
+              <li>Developed KPI tracking for <b>Total Transactions, Total Transaction Amount, Total Cashback, Success Rate, and Suspected Fraud Transactions</b>.</li>
+            </ul>
+            <p class="link">
+              <a href="https://github.com/supriyasaloni/Phonepe-UPI-Overview" target="_blank">&#8599; View on GitHub</a>
+            </p>
+          </article>
+
+          <!-- PROJECT 6: Employee Performance Dashboard (Aug 2025 - Sep 2025) -->
+          <article class="project">
+            <div class="project-stat-box">
+              <b>150 Records</b>
+              <span>Workforce Metrics</span>
+            </div>
+            <h3>Employee Performance Dashboard</h3>
+            <p class="stack">Microsoft Excel &bull; <span style="color:var(--muted); font-weight:normal; font-size:0.88rem;">Aug 2025 &ndash; Sep 2025 &bull; 3 Weeks</span></p>
+            <img class="project-media" src="employee-dashboard.png" alt="Employee Performance Dashboard" loading="lazy">
+            <ul>
+              <li>Built an interactive Excel dashboard to analyze employee working hours, efficiency, active customer-handling time, break duration, and overall performance.</li>
+              <li>Used <b>Pivot Tables, Pivot Charts, Slicers, and Conditional Formatting</b> for interactive KPI-based reporting.</li>
+              <li>Analyzed employee productivity to identify top and low performers and support performance monitoring.</li>
+            </ul>
+            <p class="link">
+              <a href="https://github.com/supriyasaloni/Employee-Dashboard-using-Excel" target="_blank">&#8599; View on GitHub</a>
+            </p>
+          </article>
+
+          <!-- PROJECT 7: University Admission Prediction (Jan 2022 - Jul 2022) -->
+          <article class="project">
+            <div class="project-stat-box">
+              <b>R&sup2; = 0.81</b>
+              <span>Model Score</span>
+            </div>
+            <h3>University Admission Prediction</h3>
+            <p class="stack">Python &bull; Pandas &bull; Scikit-learn &bull; <span style="color:var(--muted); font-weight:normal; font-size:0.88rem;">Jan 2022 &ndash; Jul 2022</span></p>
+            <ul>
+              <li>Built a machine-learning model to estimate university admission outcomes based on applicant academic and profile attributes.</li>
+              <li>Performed data preprocessing, exploratory data analysis, feature engineering, and model validation.</li>
+              <li>Compared model performance using appropriate regression evaluation metrics (R&sup2; score of 0.81) and analyzed factors associated with admission outcomes.</li>
+            </ul>
+            <p class="link">
+              <a href="https://github.com/supriyasaloni/University-Admission-Prediction" target="_blank">&#8599; View on GitHub</a>
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 5. SKILLS ========== -->
+    <section class="section" id="skills">
+      <div class="wrap section-grid">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+
+          <div class="skill-card">
+            <div class="skill-icon">&#128190;</div>
+            <h3>Core Analytics</h3>
+            <div class="skill-items">
+              <span class="skill-pill">SQL</span>
+              <span class="skill-pill">Python</span>
+              <span class="skill-pill">Power BI</span>
+              <span class="skill-pill">Tableau</span>
+              <span class="skill-pill">Microsoft Excel</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">&#128013;</div>
+            <h3>Python &amp; Libraries</h3>
+            <div class="skill-items">
+              <span class="skill-pill">Pandas</span>
+              <span class="skill-pill">NumPy</span>
+              <span class="skill-pill">Matplotlib</span>
+              <span class="skill-pill">Seaborn</span>
+              <span class="skill-pill">Scikit-learn</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">&#128202;</div>
+            <h3>Power BI</h3>
+            <div class="skill-items">
+              <span class="skill-pill">DAX</span>
+              <span class="skill-pill">Data Modeling</span>
+              <span class="skill-pill">Dashboard Development</span>
+              <span class="skill-pill">KPI Dashboards</span>
+              <span class="skill-pill">Filters</span>
+              <span class="skill-pill">Interactive Reports</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">&#128202;</div>
+            <h3>Tableau</h3>
+            <div class="skill-items">
+              <span class="skill-pill">Dashboard Development</span>
+              <span class="skill-pill">Calculated Fields</span>
+              <span class="skill-pill">Parameters</span>
+              <span class="skill-pill">Filters</span>
+              <span class="skill-pill">Data Visualization</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">&#128190;</div>
+            <h3>SQL &amp; Data Querying</h3>
+            <div class="skill-items">
+              <span class="skill-pill">Joins</span>
+              <span class="skill-pill">Subqueries</span>
+              <span class="skill-pill">CTEs</span>
+              <span class="skill-pill">Window Functions</span>
+              <span class="skill-pill">Aggregations</span>
+              <span class="skill-pill">Data Extraction</span>
+              <span class="skill-pill">Snowflake</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">&#129309;</div>
+            <h3>Business Analysis</h3>
+            <div class="skill-items">
+              <span class="skill-pill">Requirements Gathering</span>
+              <span class="skill-pill">Stakeholder Management</span>
+              <span class="skill-pill">KPI Tracking</span>
+              <span class="skill-pill">Business Reporting</span>
+              <span class="skill-pill">Process Improvement</span>
+              <span class="skill-pill">Cross-functional Collaboration</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">&#128215;</div>
+            <h3>Excel &amp; Data Analysis</h3>
+            <div class="skill-items">
+              <span class="skill-pill">Pivot Tables</span>
+              <span class="skill-pill">Pivot Charts</span>
+              <span class="skill-pill">Slicers</span>
+              <span class="skill-pill">INDEX/MATCH</span>
+              <span class="skill-pill">IF</span>
+              <span class="skill-pill">Data Cleaning</span>
+              <span class="skill-pill">Data Formatting</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">&#128208;</div>
+            <h3>Statistics &amp; Analysis</h3>
+            <div class="skill-items">
+              <span class="skill-pill">EDA</span>
+              <span class="skill-pill">Descriptive Statistics</span>
+              <span class="skill-pill">Correlation</span>
+              <span class="skill-pill">Regression</span>
+              <span class="skill-pill">Root-Cause Analysis</span>
+              <span class="skill-pill">Data Validation</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">&#128193;</div>
+            <h3>Reporting &amp; Collaboration</h3>
+            <div class="skill-items">
+              <span class="skill-pill">Self-Service Dashboards</span>
+              <span class="skill-pill">Executive Presentations</span>
+              <span class="skill-pill">Data Storytelling</span>
+              <span class="skill-pill">Documentation</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 6. CERTIFICATIONS ========== -->
+    <section class="section" id="certifications">
+      <div class="wrap section-grid">
+        <h2>Certifications &amp; Credentials</h2>
+        <div class="achieve-grid">
+          
+          <div class="win-card">
+            <div class="win-icon">&#127942;</div>
+            <div>
+              <h4>
+                <span>Business Analyst Master's Program</span>
+                <span style="font-size: 0.9rem; color: var(--gold); font-weight: 500;">Simplilearn</span>
+              </h4>
+              <p>Comprehensive training in Business Analysis, Requirements Lifecycle Management, Agile, and Stakeholder Communication.</p>
+              <a class="cert-link" href="https://success.simplilearn.com/a01384d1-ec39-4fe4-87e0-fadc760e0018" target="_blank">&#128279; Verify Credential &rarr;</a>
+            </div>
+          </div>
+
+          <div class="win-card">
+            <div class="win-icon">&#128202;</div>
+            <div>
+              <h4>
+                <span>Data Analytics Certification</span>
+                <span style="font-size: 0.9rem; color: var(--gold); font-weight: 500;">PW Skills</span>
+              </h4>
+              <p>Industry-aligned training covering SQL, Python, Power BI, Excel, and end-to-end Data Analytics project delivery.</p>
+              <a class="cert-link" href="PW_Skills_Certificate.pdf" target="_blank">&#128196; View Certificate (PDF) &rarr;</a>
+            </div>
+          </div>
+
+          <div class="win-card">
+            <div class="win-icon">&#9881;</div>
+            <div>
+              <h4>
+                <span>Jira Fundamentals Badge</span>
+                <span style="font-size: 0.9rem; color: var(--gold); font-weight: 500;">Atlassian University</span>
+              </h4>
+              <p>Proficiency in Agile project management, sprint planning, issue tracking, and workflow customization in Jira.</p>
+              <a class="cert-link" href="https://university.atlassian.com/student/award/GJ7DvqBjA2wkDDHpA5ExxnZH" target="_blank">&#128279; Verify Credential &rarr;</a>
+            </div>
+          </div>
+
+          <div class="win-card">
+            <div class="win-icon">&#128187;</div>
+            <div>
+              <h4>
+                <span>Cisco Certified Network Associate (CCNA)</span>
+                <span style="font-size: 0.9rem; color: var(--gold); font-weight: 500;">Cisco</span>
+              </h4>
+              <p>Network fundamentals, IP services, security fundamentals, and automation. <b>Credential ID:</b> 238361</p>
+            </div>
+          </div>
+
+          <div class="win-card">
+            <div class="win-icon">&#11088;</div>
+            <div>
+              <h4>
+                <span>SQL (4-Star) &amp; Python (3-Star) Skill Badges</span>
+                <span style="font-size: 0.9rem; color: var(--gold); font-weight: 500;">HackerRank</span>
+              </h4>
+              <p>Demonstrated problem-solving proficiency in SQL querying (joins, aggregations, subqueries) and Python programming.</p>
+              <a class="cert-link" href="https://www.hackerrank.com/profile/supriyasaloni111" target="_blank">&#128279; View HackerRank Profile &rarr;</a>
+            </div>
+          </div>
+
+          <div class="win-card">
+            <div class="win-icon">&#128013;</div>
+            <div>
+              <h4>
+                <span>Python Programming Certification</span>
+                <span style="font-size: 0.9rem; color: var(--gold); font-weight: 500;">IIT Kanpur</span>
+              </h4>
+              <p>Core Python programming, data structures, algorithm design, and applied scripting.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 7. ACHIEVEMENTS ========== -->
+    <section class="section" id="achievements">
+      <div class="wrap section-grid">
+        <h2>Achievements</h2>
+        <div class="achieve-grid">
+          <div class="win-card">
+            <div class="win-icon">&#127908;</div>
+            <div>
+              <h4>Gold Medal &mdash; College Stand-up Comedy</h4>
+              <p>Awarded 1st place in college-level competition<br>Demonstrates high confidence, public speaking, and audience storytelling skills</p>
+            </div>
+          </div>
+          <div class="win-card">
+            <div class="win-icon">&#127917;</div>
+            <div>
+              <h4>Acting &amp; Drama</h4>
+              <p>Earned multiple certificates for theatre &amp; drama performances across school and college<br>Strong expressive presentation and communication abilities</p>
+            </div>
+          </div>
+          <div class="win-card">
+            <div class="win-icon">&#9917;</div>
+            <div>
+              <h4>Football</h4>
+              <p>Medalist and active participant in school and college tournaments<br>Teamwork &amp; collaboration</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 8. CONTACT ========== -->
+    <section class="section" id="contact">
+      <div class="wrap section-grid">
+        <h2>Let's Connect</h2>
+        <div class="contact-grid">
+          <div class="contact-box">
+            <h3>Get in Touch</h3>
+            <div class="contact-links">
+              <a class="contact-link" href="mailto:supriyasaloni1111@gmail.com">
+                <div class="cl-icon">&#9993;</div>
+                <div>
+                  <div class="cl-label">Email</div>
+                  <div class="cl-value">supriyasaloni1111@gmail.com</div>
+                </div>
+              </a>
+              <a class="contact-link" href="https://www.linkedin.com/in/supriya-saloni1212132" target="_blank">
+                <div class="cl-icon">&#128279;</div>
+                <div>
+                  <div class="cl-label">LinkedIn</div>
+                  <div class="cl-value">linkedin.com/in/supriya-saloni1212132</div>
+                </div>
+              </a>
+              <a class="contact-link" href="https://github.com/supriyasaloni" target="_blank">
+                <div class="cl-icon">&#128187;</div>
+                <div>
+                  <div class="cl-label">GitHub</div>
+                  <div class="cl-value">github.com/supriyasaloni</div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="contact-box cta-box">
+            <h3>Open to Opportunities</h3>
+            <p>I am actively seeking Data Analyst, BI Analyst, and Business Analyst roles.<br><span style="color:var(--gold); font-size: 0.95rem; font-weight:500;">Open to Relocation &bull; Remote &bull; Hybrid</span></p>
+            <a class="btn btn-primary" href="Supriya_Saloni_Resume.pdf" target="_blank">&#128196; Download Resume</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap">
+      &copy; 2026 Supriya Saloni. Built with Data &amp; Design.
+    </div>
+  </footer>
+</body>
+</html>
